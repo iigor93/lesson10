@@ -21,6 +21,18 @@ def main():
     return string_to_return
 
 
+@app.route('/candidate/')
+def candidate():
+    """Общая страница кандидатов"""
+    return 'Укажите номер кандидата в адресной строке (Например: /candidate/1)'
+
+
+@app.route('/candidate/<string>')
+def candidate_str(string):
+    """Общая страница кандидатов"""
+    return f'Укажите номер кандидата в адресной строке (Например: /candidate/1), Вы указали строку - {string}'
+
+
 @app.route('/candidate/<int:uid>/')
 def candidate_data(uid):
     """Вывод кандидата по номеру"""
@@ -38,6 +50,12 @@ def candidate_data(uid):
             return string_to_return
 
     return 'Нет такого кандидата'
+
+
+@app.route('/skill/')
+def skill():
+    """Общая страница кандидатов"""
+    return 'Укажите навык кандидата в адресной строке (Например: /skill/go)'
 
 
 @app.route('/skill/<skill_name>/')
