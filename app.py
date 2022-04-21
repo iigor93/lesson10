@@ -17,6 +17,7 @@ def main():
         string_to_return += 'Имя кандидата - ' + items.get('name') + '<br>'
         string_to_return += 'Позиция кандидата - ' + items.get('position') + '<br>'
         string_to_return += 'Навыки - ' + items.get('skills') + '<br>'
+        string_to_return += '--------------------'
         string_to_return += '<br>'
     string_to_return += '</pre>'
     return string_to_return
